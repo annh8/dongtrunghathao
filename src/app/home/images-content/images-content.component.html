@@ -1,0 +1,20 @@
+<div class="breadcrumb">
+  <div class="center">
+    <div id="breadcrumb">
+      <a routerLink="/">Trang chủ </a>
+      &gt;
+      <a routerLink="/anh">Ảnh</a>
+    </div>
+  </div>
+</div>
+<div id="wraper">
+  <div id="container">
+    <section style="margin:0px; margin-top:20px" id="content">
+      <div class="row">
+        <div class="col-3" *ngFor="let item of config.images">
+          <img width="300px" height="300px" style="padding: 5px" src="{{item.image}}" />
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

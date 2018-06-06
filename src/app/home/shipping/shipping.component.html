@@ -1,0 +1,115 @@
+<div id="wraper">
+  <div id="container">
+    <form method="post" #form="ngForm">
+      <div>
+        <h1>Đặt hàng</h1>
+        <div class="onecheckout">
+          <div id="payment-address">
+            <div class="onecheckout-heading">
+              <span>Thông tin khách hàng</span>
+            </div>
+            <div class="onecheckout-content">
+              <div class="divclear">
+                <span class="required">*</span> Tên:
+                <input type="text" name="firstname" [(ngModel)]="cart.customer.name" class="large-field" required>
+              </div>
+              <br>
+              <div class="divclear">
+                <span class="required">*</span> Email:
+                <br>
+                <input type="text" name="email" [(ngModel)]="cart.customer.email" class="large-field" required>
+                <br>
+                <span class="required">*</span> Địa chỉ:
+                <br>
+                <input type="text" name="address_1" [(ngModel)]="cart.customer.location" class="large-field" required>
+              </div>
+              <br>
+              <div class="divclear">
+                <span class="required">*</span> Điện thoại:
+                <br>
+                <input type="text" name="telephone" [(ngModel)]="cart.customer.phone" class="large-field" required>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="onecheckoutmid">
+          <div id="payment-method">
+            <div class="onecheckout-heading">Yêu cầu khác</div>
+            <div class="onecheckout-content">
+              <p style="padding-top:10px;">Nội dung yêu cầu</p>
+              <textarea name="comment" rows="5" style="width: 97%;" [(ngModel)]="cart.note"></textarea>
+              <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="onecheckout">
+          <div id="confirm">
+            <div class="onecheckout-heading">Xác nhận đơn hàng</div>
+            <div class="onecheckout-content" style="display: block;">
+              <div class="onecheckout-product">
+                <table>
+                  <thead>
+                    <tr>
+                      <td class="name">Sản phẩm</td>
+                      <td class="quantity">Số</td>
+                      <td class="price">Giá</td>
+                      <td class="total">Tổng</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of cart.productList">
+                      <td class="name">
+                        <a routerLink="/{{item.link}}">{{item.name}}</a>
+                      </td>
+                      <td class="quantity">{{item.amount}}</td>
+                      <td class="price">
+                        <span *ngIf="item.price!=0 && item.price != ''">{{item.price | number:'1.0'}} VNĐ</span>
+                        <span *ngIf="item.price == 0 || item.price == ''">Liên hệ</span>
+                      </td>
+                      <td class="total">
+                        <span *ngIf="item.total!=0 && item.total != ''">{{item.total | number:'1.0'}} VNĐ</span>
+                        <span *ngIf="item.total == 0 || item.total == ''">Liên hệ</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2" class="price">
+                        <b>Tổng:</b>
+                      </td>
+                      <td colspan="2" class="total">
+                        <span *ngIf="cart.total!=0 && cart.total != ''">{{cart.total | number:'1.0'}} VNĐ</span>
+                        <span *ngIf="cart.total == 0 || cart.total == ''">Liên hệ</span>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div class="cart-module">
+                <div class="cart-heading active">
+                  <span style="color: #ff6c00">Mã giảm giá</span>
+                </div>
+                <div class="cart-content" id="coupon" style="display: block;">Mã giảm giá:&nbsp;
+                  <br>
+                  <input type="text" readonly="readonly" name="coupon" [(ngModel)]="cart.promotion.code">
+                </div>
+              </div>
+              <div class="buttons">
+                <div style="text-align:right;">
+                  <button id="button-confirmorder" class="button" [disabled]="submitted || !form.valid" (click)="save()">
+                    <span>Xác nhận</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="confirmorder" style="clear:both"></div>
+      </div>
+    </form>
+  </div>
+
+</div>

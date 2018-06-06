@@ -1,0 +1,204 @@
+<header id="header">
+    <div class="toptop">
+        <div class="toptop960">
+            <div class="toplink0">
+                <img src="assets/theme/image/social.png">
+            </div>
+            <div class="toplink">
+                <span class="iconmb">
+                    <a href="{{config.website}}">
+                        <img src="{{config.logoSmall}}" title="{{config.title}}" alt="{{config.title}}" />
+                    </a>
+                </span>
+                <li class="sp">
+                    <span>Hỗ trợ trực tuyến 24/7:</span>
+                    <a target="_blank" href="tel:{{config.hotonline}}">
+                        <i class="fa fa-phone"></i> {{config.hotonline}}</a>
+                </li>
+                <li class="em">
+                    <i class="fa fa-envelope"></i>
+                    <b> Email:</b> {{config.email}}</li>
+                <li class="zl">
+                    <a target="_blank" *ngIf="config.skype !== ''" href="skype:{{config.skype}}?chat">
+                        <i class="fa fa-skype"></i>
+                    </a>
+                    <a target="_blank" *ngIf="config.facebook !== ''" href="{{config.facebook}}">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a target="_blank" *ngIf="config.youtube !== ''" href="{{config.youtube}}">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </li>
+            </div>
+            <div class="munemb">
+                <div class="container demo-1">
+                    <div class="main clearfix">
+                        <div>
+                            <div id="dl-menu" class="dl-menuwrapper">
+                                <button class="dl-trigger">Open Menu</button>
+                                <ul class="dl-menu">
+                                    <li *ngFor="let mn of menuMobile" class="inactive" style="
+                                    padding-right: 20px;">
+                                        <a routerLink="/{{mn.path}}">
+                                            <span>{{mn.title}} </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="wraper1">
+        <div class="module_topheader">
+            <div class="topheader">
+                <div class="logo">
+                    <a href="/">
+                        <img src="{{config.logo}}" title="{{config.title}}" alt="{{config.title}}" />
+                    </a>
+                </div>
+                <div class="toplink">
+                    <li class="sp">
+                        <span>Hỗ trợ trực tuyến 24/7:</span>
+                        <a target="_blank" href="tel:{{config.hotonline}}">
+                            <i class="fa fa-phone"></i> {{config.hotonline}}</a>
+                    </li>
+                    <li class="em">
+                        <i class="fa fa-envelope"></i>
+                        <b> Email:</b> {{config.email}}</li>
+                    <li class="zl">
+                        <a target="_blank" *ngIf="config.skype !== ''" href="skype:{{config.skype}}?chat">
+                            <i class="fa fa-skype"></i>
+                        </a>
+                        <a target="_blank" *ngIf="config.facebook !== ''" href="{{config.facebook}}">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a target="_blank" *ngIf="config.youtube !== ''" href="{{config.youtube}}">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li>
+                    <div class="topsearch">
+                        <div id="search">
+                            <div class="searchnd">
+                                <input type="text" value="Từ khóa" id="filter_keyword" (keyup.enter)="search()" [(ngModel)]="filter_keyword"
+                                    style="color: #999;" />
+
+                                <div class="searchicon">
+                                    <a (click)="search();">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topheadercenter">
+                    <div class="topmxh2">
+                        <a href="">
+                            <span style="border: 0px solid #fff;border-radius: 100%;padding: 2px;background: #e65c13;padding-top: 9px;padding-bottom: 9px;">
+                                <i style="border: 2px solid #fff; border-radius: 100%; padding: 7px; background: #e65c13;" class="fa fa-shopping-bag"></i>
+                            </span>
+                        </a>Ưu đãi về giá
+                        <a href="">
+                            <span style="border: 0px solid #fff;border-radius: 100%;padding: 2px;background: #e65c13;padding-top: 9px;padding-bottom: 9px;">
+                                <i style="border: 2px solid #fff; border-radius: 100%; padding: 7px; background: #e65c13;" class="fa fa-hand-peace-o"></i>
+                            </span>
+                        </a> Uy tín, chất lượng
+                        <a href="">
+                            <span style="border: 0px solid #fff;border-radius: 100%;padding: 2px;background: #e65c13;padding-top: 9px;padding-bottom: 9px;">
+                                <i style="border: 2px solid #fff; border-radius: 100%; padding: 7px; background: #e65c13;" class="fa fa-truck"></i>
+                            </span>
+                        </a> Vận chuyển toàn quốc
+                    </div>
+
+                </div>
+                <div class="topheaderright">
+                    <div class="hotlinet">
+                        <span class="hl1">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        <span class="hl2">
+                            Hỗ trợ khách hàng
+                            <br />
+                            <a href="tel:{{config.hotonline}}">{{config.hotonline}}</a>
+                        </span>
+                    </div>
+                    <div class="topheaderrightten">
+                        <div class="mangxh">
+
+                            {{config.companyName}}
+                            <br />
+                            <a style="    font-size: 22px;    padding-right: 0px;    color: #ED1C2A;" href="tel:{{config.hotonline}}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wraper2">
+        <div class="moduleheader">
+            <nav class="nav-container">
+                <div class="nav-inner">
+                    <!-- ======= Menu Code START ========= -->
+                    <div id="menu" class="main-menu">
+                        <div class="nav-responsive" style="display: none;">
+                            <span>Menu</span>
+                            <div class="expandable"></div>
+                        </div>
+                        <ul class="main-navigation">
+                            <li>
+                                <a class="inactive" href="/">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li *ngFor="let mn of menu" class="inactive">
+                                <a routerLink="/{{mn.path}}"  title="{{mn.title}}">{{mn.title}}</a>
+                                <ul *ngIf="mn.child != null">
+                                    <li *ngFor="let child of mn.child">
+                                        <a title="{{child.name}}" class="inactive" routerLink="/{{child.link}}" >{{child.name}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="fixNav" style="display: none">
+                <div class="wraperfix xanhga">
+                    <div class="headermn">
+                        <nav class="nav-container">
+                            <div class="nav-inner">
+                                <!-- ======= Menu Code START ========= -->
+                                <div id="menu" class="main-menu">
+                                    <div class="nav-responsive" style="display: none;">
+                                        <span>Menu</span>
+                                        <div class="expandable"></div>
+                                    </div>
+                                    <ul class="main-navigation">
+                                        <li>
+                                            <a class="inactive" href="/">
+                                                <i class="fa fa-home"></i>
+                                            </a>
+                                        </li>
+                                        <li *ngFor="let mn of menu" class="inactive">
+                                            <a routerLink="/{{mn.path}}" title="{{mn.title}}">{{mn.title}}</a>
+                                            <ul *ngIf="mn.child != null">
+                                                <li *ngFor="let child of mn.child">
+                                                    <a title="{{child.name}}" class="inactive" routerLink="/{{child.link}}">{{child.name}}</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lineOne"></div>
+</header>

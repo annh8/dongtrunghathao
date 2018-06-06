@@ -1,0 +1,50 @@
+<div class="wraper4">
+  <div class="module_middle_end">
+    <div class="column_middle_end">
+    </div>
+  </div>
+  <div class="boxtt">
+    <div class="boxtt2">
+      <div class="topdulich">Tin mới nhất</div>
+      <div class="list_article">
+        <div class="item00" *ngFor="let item of news">
+          <div class="item">
+            <a routerLink="/{{item.link}}">
+              <img src="{{item.imageInfo[0].image}}">
+            </a>
+            <div class="tentin">
+              <a routerLink="/{{item.link}}">{{item.name}}</a>
+            </div>
+            <div class="metatin">{{item.description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <section style="margin-left: 0px" id="content">
+      <div class="dathangkm">
+        <div class="top">
+          <span>Chương trình khuyến mại đặc biệt
+          </span>
+        </div>
+        <div>
+          <ul *ngFor="let item of promotion">
+            <li>
+              {{item.title}}</li>
+            <li>
+              Giảm {{item.sale}}%</li>
+            <li>
+              Mã giảm giá: {{item.code}}</li>
+            <li>
+                {{item.saving}}</li>
+            <li>
+              Bảo hành {{item.guarantee}}</li>
+            <li>
+              {{item.ship}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

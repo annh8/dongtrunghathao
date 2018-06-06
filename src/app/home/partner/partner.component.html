@@ -1,0 +1,38 @@
+<div class="imagelinks">
+  <div id="container" *ngIf="config.partner.length > 0">
+    <div class="top">
+      <span>Đối tác</span>
+    </div>
+    <div class="middledt">
+      <carousel id="owl-imagelinks1">
+        <slide>
+          <div class="row">
+            <div class="col-md-2" *ngFor="let item of config.partner; let i=index">
+              <a title="" href="" target="blanc" *ngIf="i < 6">
+                <img src="{{item.image}}" alt="" />
+              </a>
+            </div>
+          </div>
+        </slide>
+        <slide *ngIf="config.partner.length > 5">
+            <div class="row">
+              <div class="col-md-2" *ngFor="let item of config.partner |slice:1:config.partner.length; let i=index;">
+                <a title="" href="" target="blanc">
+                  <img src="{{item.image}}" alt="" />
+                </a>
+              </div>
+            </div>
+        </slide>
+        <slide *ngIf="config.partner.length > 11">
+            <div class="row">
+              <div class="col-md-2" *ngFor="let item of config.partner |slice:2:config.partner.length; let i=index;">
+                <a title="" href="" target="blanc">
+                  <img src="{{item.image}}" alt="" />
+                </a>
+              </div>
+            </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>

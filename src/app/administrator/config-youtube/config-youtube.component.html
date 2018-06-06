@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-12">
+    <form method="post" #form="ngForm">
+
+      <nb-card>
+        <nb-card-header>Link video</nb-card-header>
+        <nb-card-body>
+          <div class="form-group row" *ngFor="let item of config.video;let index = index;">
+            <label for="inputName" class="col-sm-1 col-form-label">Tiêu đề</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="video_title_{{index}}" value="{{item.title}}" (keyup)="receiveDataTitle($event,index)">
+            </div>
+            <label for="inputName" class="col-sm-1 col-form-label">Key</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="video_key_{{index}}" value="{{item.key}}" (keyup)="receiveData($event,index)">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary" (click)="onRemoveVideo()">Xoá</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success" (click)="onPlusVideo()">Thêm</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-body>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success btn-demo" (click)="onSave()" [disabled]="submitted || !form.valid">Lưu</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </form>
+  </div>
+</div>

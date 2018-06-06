@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>
+        Danh mục
+      </nb-card-header>
+      <nb-card-body>
+        <ng2-smart-table #table (userRowSelect)="onSelectedRow($event)" [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div class="col-md-6">
+    <nb-card>
+      <nb-card-header>Chi tiết</nb-card-header>
+      <nb-card-body>
+
+        <form method="post" #form="ngForm">
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Upload ảnh</label>
+            <div class="col-sm-6">
+              <upload-form [pathFolder]="pathFolder" (getUrlEvent)="receiveUrl($event)"></upload-form>
+            </div>
+            <div class="col-sm-3">
+                <img width="200px" src="{{category.image}}" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Mã danh mục</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="categoryId" id="inputId" [(ngModel)]="category.id" disabled="disabled">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Tên danh mục</label>
+            <div class="col-sm-9">
+              <input type="text" #cateName class="form-control" name="categoryName" id="inputName" [(ngModel)]="category.name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputOrder" class="col-sm-3 col-form-label">Số thứ tự</label>
+            <div class="col-sm-9">
+              <input type="number" min="0" value="0" class="form-control" name="categoryOrder" id="inputOrder" [(ngModel)]="category.order"
+                required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary btn-demo" (click)="onClear()">Thêm mới</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success btn-demo" (click)="onSave()" [disabled]="submitted || !form.valid">Lưu</button>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

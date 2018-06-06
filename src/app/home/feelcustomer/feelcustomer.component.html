@@ -1,0 +1,32 @@
+<div class="wow fadeInUp">
+  <div class="imagelinks11">
+    <div id="container">
+      <div class="top">
+        <span>Cảm nhận khách hàng</span>
+      </div>
+      <div class="middledt">
+        <carousel id="owl-imagelinks11">
+          <slide *ngFor="let item of config.feelcustomer | slice:0:(config.feelcustomer.length+1)/2; let i=index;">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="imagelinks11t1" [innerHtml]="config.feelcustomer[i].feel | safehtml"></div>
+                <br>
+                <br>
+                <div class="imagelinks11t2">{{config.feelcustomer[i].info}}</div>
+                <img src="{{config.feelcustomer[i].image.image}}" alt="{{config.feelcustomer[i].info}}" />
+              </div>
+              <div class="col-md-6" *ngIf="config.feelcustomer[(i+config.feelcustomer.length/2).toFixed(0)]!=null">
+                <div class="imagelinks11t1" [innerHtml]="config.feelcustomer[(i+config.feelcustomer.length/2).toFixed(0)].feel | safehtml"></div>
+                <br>
+                <br>
+                <div class="imagelinks11t2">{{config.feelcustomer[(i+config.feelcustomer.length/2).toFixed(0)].info}}</div>
+                <img src="{{config.feelcustomer[(i+config.feelcustomer.length/2).toFixed(0)].image.image}}" alt="{{config.feelcustomer[(i+config.feelcustomer.length/2).toFixed(0)].info}}"
+                />
+              </div>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
+  </div>
+</div>

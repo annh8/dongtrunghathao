@@ -1,0 +1,50 @@
+{
+  "config" : {
+    "aboutus" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo consequat. Duis autem vel eum iriure dolor vulputate velit esse molestie at dolore.",
+    "email" : "",
+    "facebookframe" : "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmoithatmocbinhminh%2F&tabs=timeline&width=263&height=263&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=711423459018142",
+    "facebooklink" : "https://www.facebook.com/moithatmocbinhminh/",
+    "location" : "P507_CT1B TTXVN-Kim Văn-Kim Lũ",
+    "phone" : "0911 822 868",
+    "skype" : "",
+    "youtubelink" : ""
+  },
+  "category" : {
+    "1" : {
+      "id" : "1",
+      "img" : "category1.jpg",
+      "name" : "Thiết kế nội thất",
+      "order": 3
+    }
+  },
+  "product" : {
+    "0": {
+      "categoryId" : "1",
+      "id" : "0",
+      "images" : [ {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-1.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-10.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-11.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-2.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-3.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-4.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-5.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-6.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-7.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-8.jpg"
+      }, {
+        "url" : "mau-biet-thu-3-tang-dep-va-dang-cap-nhat-2018-9.jpg"
+      } ],
+      "name" : "Biệt thự _ tầng đầy ấn tượng"
+    }
+  }
+}

@@ -1,0 +1,633 @@
+@media only screen and (max-width : 1200px) {
+	
+html, body {overflow-x: hidden;width: 100%;margin: 0 auto;}
+.munemb{
+    text-align: right;
+    display: block;
+    padding-left: 0px;
+}
+#container, #content , .moduleheader {width: 96%;padding: 0px;}
+#column_left {display: none}
+#column_right {display: none}
+#content  {width: 100%;margin:0px}
+.module_topheader{width: 100%;}
+.moduleheader{width: 100%;}
+.module_middle_top{width: 100%;}
+.module_middle_end{width: 100%;}
+.module_danhmucface{width: 100%;}
+.module_footermenu{width: 100%;}
+.module_middle_end{width: 100%;padding: 0px;}
+.wraper4 {width: 96%;margin: 0 auto;}
+.headermn{width: 100%;}
+#column_middle_top {
+ 
+    display: block;
+    width: 100%;
+}
+.wraper2  {display:none}
+.toplink .em{display:none}
+
+#wraper  {padding:0px}
+.toptop960{width: 100%;overflow: hidden;text-align: left;}
+.toptop {
+    text-align: center;
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    background: #702425;
+}
+.topheader {
+    text-align: center;
+    padding: 2%;
+    width: 96%;
+    padding-top: 0px;
+    display: none;
+}
+.imgqc {
+    float: none;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+.logo {
+	vertical-align: top;
+	padding-top: 15px;
+	padding-right: 0px;
+	width: 50%;
+	margin: 0 auto;
+	height: auto;
+	float: none;
+	padding-bottom: 10px;
+	display:none;
+} 
+.logo img {
+    width: 100%;
+}
+.hotlinet{display: block;font-size: 16px;background: #eee;padding: 10px;}
+.topheadercenter {
+    display: block;
+    vertical-align: top;
+    padding-top: 0px;
+    width: 100%;
+    font-size: 0px;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0%;
+    display: none;
+}
+
+.topheaderright {
+    display: none;;
+}
+.categorywallandfile8 .cw_col_c {
+    padding-top: 0px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+.sanpham, .sanphamdm{display: inline-block;width: 31.33%;vertical-align: top;margin-right: 1%;margin-bottom: 2%;margin-left: 1%;padding-bottom: 0px;text-align: center;border: 0px solid #ddd;}
+
+.dmcon {
+    display: block;
+    width: 99%;
+    vertical-align: top;
+    margin-right: 0%;
+    margin-bottom: 10px;
+    padding: 0px;
+    float: none;
+}
+.dmcon img{width: 100%;height: auto}
+
+.dmsp {text-align: center;width: 100%;}
+#categorywallandfile2 .cw_col_c ul{margin:0; padding:0; font-size: 0px; display:block; text-align: center; overflow:hidden;line-height: 20px;}
+#categorywallandfile2 .cw_col_c ul li{list-style: none;display: inline-block;vertical-align: top;width: 180px;margin-right: 6px;margin-left: 6px}	
+#categorywallandfile2 .cw_col_c ul li:nth-child(3n+3) {margin-right: 6px;margin-left: 6px}
+.duhovkool {
+    text-align: center;
+    font-size: 0px;
+    margin-top: 0px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu{display : none}
+.danhmucface {
+    font-size: 0px;
+    padding-top: 0px;
+}
+#footer {
+   margin-top: 0px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0%;
+   margin-top: 20px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+}
+
+.footer11 {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+    margin-left: 0%;
+    text-align: center;
+    font-size: 0px;
+}
+
+.footer12{display: block;vertical-align: top;width: 100%;margin-left: 0px;text-align: center;margin-top: 20px;font-size: 13px;background: rgba(255, 255, 255, 0.1);padding-top: 15px;}
+
+
+.informationfooter {
+    text-align: center;
+    font-size: 0px;
+    padding-bottom: 15px;
+}
+.informationfooter ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.powered {
+    display: block;
+    vertical-align: top;
+    margin-left: 0%;
+    font-size: 14px;
+    text-align: center;
+    float: none;
+    width: 100%;
+    }
+.welcome {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+    margin-right: 0%;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+.newletter  {}	
+.cuoiphai {
+}
+.onecheckout {
+	width:100%;
+	float:none;
+	text-align:left;
+}
+.onecheckoutmid {
+	width:100%;
+	float:none;
+	margin:0%;
+	text-align:left;
+}
+.topmxh{display: none;}
+.toplink .zl {border-left: 0px solid #d2d1d1;padding-left: 0px;}
+ .toplink .sp {   border-right: 0px solid #d2d1d1;}
+ .toplink{display: block;vertical-align: top;text-align: center;color: #fff;float: left;padding-left: 2%;padding-right: 0%;position: absolute;padding-left: initial;background: none;padding-top: 0px;}
+.wraper1 .toplink{display: none;}
+.iconmb {display: inline-block;padding-right: 10px;float: left;padding-left: 10px;}
+.toplink span img{height: 33px;width: auto;vertical-align:middle}
+.toptop a {
+    margin-left: 0px;
+    font-size: 20px;
+    color: #fff;
+}
+.topsearch{}
+.html2{}
+.html2 img{max-width: 100%;height: auto;}
+.spt{}
+.spl{}
+.spl h1 {}
+.product-info {margin-right: 0px;padding-top:0px;}
+.product-infoo {    padding-right: 0px;}
+.anhlon{border: 0px solid #E4E4E4;	padding: 1%;width:98%; background: #eee;}
+.image-additional{padding-top: 5px;margin-bottom: 20px;text-align: left;}
+.image-additional li{display: inline-block;text-align: center;margin-right: 2%;margin-bottom: 10px;}
+.image-additional img{border: 0px solid #DDDDDD;padding: 2%;background: #eee;width:96%;}
+#header {
+    position: relative;
+  
+}
+.danhmuc {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 0px;
+}
+.slideshowtrai {
+    display: block;
+    margin-right: 0px;
+    width: 100%;
+    vertical-align: top;
+}
+
+
+.column_middle_end .middle{height: auto;padding: 10px;}
+.middleend1{display:block; margin-right: 0px;width: 100%;     font-size: 14px;   vertical-align: top; }
+.middleend2{display:block; margin-right: 0px;width: 100%;       vertical-align: top; }
+.middleend3{display:block; margin-right: 0px;width: 100%;       vertical-align: top; }
+.googlecong{display:block; width: 100%;margin-bottom: 10px;  text-align: center;   vertical-align: top; }
+.topmxh2{display: none}
+.danhmuc li{width: calc(25% - 10px);}
+#wraperhtml2 ul li:first-child {
+    display: inline-block;
+    width: auto;
+    
+    margin-right: 20px;
+  }
+ #wraperhtml2 ul li{
+  margin-bottom: 10px;
+   }
+   .imagelinks2{}
+   .imagelinks3{margin:0px}
+   .imagelinks3t2{font-size: 14px;text-align: justify;}
+.imagelinks3t{}
+.imagelinks3p{}
+.imagelinks3 h1{
+    margin-top: 0px;
+    font-size: 22px;
+    font-weight: normal;
+}
+   
+.imagelinks5 iframe, object, embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.imagelinks5 .youtube{ padding-top: 0px;
+    padding: 11px; padding-bottom: 0px;   margin-bottom: 0px;
+	position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
+	}
+	  .welcome blockquote {
+    float: left;
+    width: 30.3333%;
+    margin: 0px;
+    margin-right: 3%;
+    text-align: justify;
+    margin-bottom: 1%;
+}
+.categorywallandfile8 .cw_col .topct8 h2 a{padding-right: 10px;padding-left: 10px;font-size: 22px;width: auto;}
+
+.categorywallandfile8 .cw_col .topct8 h2 span{display: none;}
+.boxtt2 {
+    margin: 0 auto;
+    width: 98%;
+}
+.topdulich{font-size: 22px}
+.wraper6{padding-bottom: 0px;}
+.nav-inner{display: none;}
+ .duhovkool2 { width: 98%;}  
+ .imagelinks4ff img {
+    width: 98%;
+    height: auto;
+}
+.imagelinks4ff {    margin: 0 auto;}
+.toplink0, .nav-container  {display: none}
+.categorywallandfile8 .cw_col .topct8 {width: 100%;}
+.modcontact{
+    position: relative;
+    z-index: 999999999999;
+    font-size: 14px;
+    padding:10px;
+    position: relative;
+    bottom: 0px;
+    text-align: center;
+    background: #a8d5f3;
+    color: #776526;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.modcontact input{color: #666;margin:0px;background: #fff;margin-bottom:10px;border: 1px solid #E0D3C9;}
+.modcontact .xuonghang{ clear: both; display: block; } 
+.column_middle_end .imagelinks {
+    width: 100%;
+    float: none;
+    
+}
+.wrapernl2 {
+    overflow: auto;
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.mangxhln {
+    margin-top: 0px;
+    font-size: 14px;
+    text-transform: uppercase;
+    float: none;
+    text-align:center;
+}
+}
+
+@media only screen and (max-width : 800px) {
+.box-1 {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#popWindow {
+   
+    bottom: 70px;
+   
+}
+.logo-footer-1 {
+    display:none;
+}
+	.dathangkm ul {
+   
+    width: calc(48% - 10px);
+
+}
+	.danhmuc li{width: calc(33.33% - 10px);}
+.footer11 li{}
+
+  #wraperhtml2 ul li:before{
+  
+    font-size: 16px;
+   }
+
+.sanpham, .sanphamdm{display: inline-block;width: 48%;vertical-align: top;margin-right: 1%;margin-bottom: 2%;margin-left: 1%;padding-bottom: 0px;text-align: center;border: 0px solid #ddd;}
+
+ .dmcon {
+    display: block;
+    width: 99%;
+    vertical-align: top;
+    margin-right: 0%;
+    margin-bottom: 10px;
+    padding: 0px;
+    float: none;
+}  
+.column_middle_end .box{width: 100%;margin-right: 0%;float: none;}
+.column_middle_end .boxfb{width: 100%;margin-right: 0%;float: none;}
+
+.welcome blockquote {
+    float: left;
+    width: 46%;
+    margin: 0px;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align: justify;
+    margin-bottom: 1%;
+}
+.chuslidew .titlesl{
+    bottom: 35px;  
+    font-size:20px;
+    padding: 10px 20px;
+    }
+.chuslidew .desc{display: none}
+.spsp {    width: 46%;}
+
+.sanphamdmmon {
+    float: none;
+    width: 100%;
+    vertical-align: top;
+    margin-right: 0%;
+    margin-bottom: 3%;
+    text-align: left;
+    overflow: auto;
+}
+.sanphamdmnews a {
+  
+    font-size: 24px;
+    line-height: 1;
+  
+}
+.sanphamdmnews_meta {
+    font-size: 15px;
+    line-height: 17px;
+   
+}
+.sanphamdmnewschitiet {
+	display:none;
+}
+
+.html2 blockquote {
+    width: 100%;
+    float: none;
+    margin: 0px;
+    text-align: justify;
+}
+.mymodule7 img {
+    float: right;
+    width: 20%;
+    height: auto;
+}
+.mymodule7 h3:before {
+    content: "\f013";
+    font-family: FontAwesome;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    display: none;
+}
+.mymodule7{font-size: 14px;}
+.mymodule7 h3 {
+    font-size: 20px;
+   
+}
+.mymodule8 blockquote{margin:0px;width: 50%;float: left;margin-top: 20px;}
+.metatin{display:none}
+.imagelinks3t{float:none;width:100%;margin: 0px;margin-bottom: 20px;}
+.imagelinks3p{}
+}
+@media only screen and (max-width : 620px) {
+.spt{display: block;width:100%; margin-bottom: 10px;}
+.spl{display: block;width: 100%;margin-left: 0%;vertical-align: top;}
+.spl h1 {}
+.anhlon{	padding: 1%;width:98%; background: #eee;}
+.image-additional{padding-top: 5px;margin-bottom: 20px;text-align: left;}
+.image-additional li{display: inline-block;text-align: center;margin-right: 2%;margin-bottom: 10px;}
+.image-additional img{border: 0px solid #DDDDDD;padding: 2%;background: #eee;width:96%;}
+
+ .dmcon {
+    display: block;
+    width: 99%;
+    vertical-align: top;
+    margin-right: 0%;
+    margin-bottom: 10px;
+    padding: 0px;
+    float: none;
+}  
+
+.column_middle_end .box {
+    width: 100%;
+    margin-right: 0%;
+    float: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+.column_middle_end .boxfb, .column_middle_end .html1{
+    width: 100%;
+    margin-right: 0%;
+    float: none;
+    padding: 0px;
+    }
+
+
+    .imagelinks21{width: 100%; float:none; margin-right:0%;}
+ .imagelinks22{width: 48%;}
+ .welcome blockquote {
+    float: none;
+    width: 100%;
+    margin: 0px;
+    margin-right: 0%;
+    text-align: justify;
+    margin-bottom: 1%;
+}
+.toplink .sp span{ display:none;}
+.duhovkool .uli {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.item00 {width: 46%;display: inline-block;margin-right: 1%;margin-left: 1%;margin-bottom: 2%;vertical-align: top;padding: 1%;background: #fff;}
+.item00:first-child {}
+
+.boxtt{margin-bottom: 20px}
+.heading1 h2{font-size: 28px}
+.sanphammoi {
+    padding-top: 10px;
+    margin-bottom: 0px;
+   
+}
+.imagelinks4ff h3 {
+    font-size: 16px;
+    margin-top: 0px;
+    line-height: 20px;
+}
+.imagelinks3t{ float: none; width:100%; }
+.imagelinks3p{ float: left; width: 100%; margin-left: 0%}
+.imagelinks3 h1{
+    margin-top: 0px;
+    font-size: 22px;
+    font-weight: normal;
+}
+.chuslidew .titlesl{
+    bottom: 15px;
+       font-size:18px;
+    padding: 5px 10px;
+    }
+.imagelinks3t2 {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: justify;
+    margin-right: 0px;
+    padding: 10px;
+}
+.sanphamdmnews a {
+  
+    font-size: 20px;
+    line-height: 1;
+  
+}
+.sanphamdmnews_meta {
+    font-size: 14px;
+    line-height: 17px;
+   
+}
+.sanphamdmnews .textphai{width: 46%;float: left;margin-left: -6%;background: #fff;position: relative;z-index: 11;padding: 2%;padding-left: 6%;padding-right: 0%;}
+.sanphamdmnews .image {
+    border: 1px solid #ddd;
+    width: 50%;
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-right: 3%;
+}
+
+.html2 blockquote:nth-child(3n+2){width: 100%;margin-left: 0%;margin-right: 0%;float: none;
+text-align:center;}
+.html2 blockquote:nth-child(3n+2) a{width: auto;
+padding: 7px 10px 5px 10px;border: 1px solid #702425;}
+
+.cuoiphai,.cuoiphai0 {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+}
+}
+@media only screen and (max-width : 520px) {
+	
+		.danhmuc li{width: calc(50% - 10px);}
+.tabs a:before {
+  
+    display:none;
+}
+.footer11 li{vertical-align: top;width: 100%;margin: 0px;display: block}
+
+.chuslidew .titlesl{
+    bottom: 10px;
+       font-size:14px;
+    padding: 5px 10px;
+    }
+     .sanphamdmmon .tensp, .sanphamdmnews .tensp {
+    padding-top: 0px;
+
+}
+.sanphamdmnews a, .sanphamdmmon a {
+
+    font-size: 16px;
+    line-height: auto;
+    margin-bottom: 3px;
+   
+}
+
+.sanphamdmnews .textphai, .sanphamdmnews:nth-child(2n+2) .textphai{float: left;margin: 0%;background: #fff;position: relative;z-index: 11;padding: 0%;padding-left: 0%;padding: 0%;width: 57%;}
+.sanphamdmnews .image, .sanphamdmnews:nth-child(2n+2) .image {
+    border: 0px solid #ddd;
+    width: 40%;
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-right: 3%;
+    margin-left:0px;
+}
+
+.dathangkm ul {
+   
+    width: calc(98% - 10px);
+    float:none;
+
+}
+
+.mymodule7{font-size: 12px;}
+.mymodule7 h3 {
+    font-size: 16px;
+   margin-top:0px
+}
+ .mymodule7 h3:before{
+    
+    font-size: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    }
+
+
+    
+}
+@media only screen and (max-width : 361px) {
+.danhmuc li{width: calc(100% - 10px);}
+.toplink .zl{display:none}
+
+	.toplink .sp {
+    padding-right: 0px;
+    border-right: 0px solid #d2d1d1;
+
+}
+    .sanpham, .sanphamdm{display: block;width: 98%;vertical-align: top;margin-right: 1%;margin-bottom: 2%;margin-left: 1%;padding-bottom: 0px;text-align: center;border: 0px solid #ddd;}
+
+.toplink .sp a{font-size:16px;}
+.mymodule8 blockquote{margin:0px;width: 100%;float: none;margin-top: 20px;}
+
+}
+
+@media only screen and (max-width : 261px) {
+.toptop a {margin-left: 3px;    font-size: 13px;}
+.imagelinks22 {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+}
+
+}

@@ -1,0 +1,462 @@
+<div class="breadcrumb">
+  <div class="center">
+    <div id="breadcrumb">
+      <a routerLink="/">Trang chủ </a>
+      &gt;
+      <a routerLink="/{{product.link}}">{{product.name}}</a>
+    </div>
+  </div>
+</div>
+<div id="wraper">
+  <div id="container">
+    <section style="margin:0px; margin-top:20px" id="content">
+      <div class="middle">
+        <div style="width: 100%; margin-bottom: 30px;">
+          <div class="product-info">
+            <div style="overflow: hidden">
+              <div class="spt">
+                <div class="thumb">
+                  <img #img src="{{product.imageInfo[0].image}}">
+                </div>
+                <div class="row" style="background-color: white;">
+                    <br/>
+                  </div>
+                
+                <div class="row" style="background-color: white;">
+                  <div class="col-md-2" *ngFor="let item of product.imageInfo">
+                    <img (mouseenter) ="mouseEnter(item.image)" src="{{item.image}}" style="width: 120px;height: 50px;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="spl">
+                <h1>{{product.name}}</h1>
+                <div class="splc">
+                  <div style="float: left;margin: 1px 3px 1px 1px;">
+                    <iframe [src]="config.likeFacebook | safeLink" width="112" height="50" style="border:none;overflow:hidden" scrolling="no"
+                      frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                  </div>
+                  <div style="float: left;margin: 1px 3px 1px 1px;">
+                    <div id="content">
+                      <div class="g-plusone"></div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="metadessp">
+                  <b>Mã sản phẩm:</b> {{product.code}}
+                  <div>
+                    <b>Trạng thái:</b> {{product.status}}
+                  </div>
+                  <div class="giactsp">
+                    <span class="tengia">Giá:</span>
+                    <span *ngIf="product.price!=0 && product.price != ''">{{product.price | number:'1.0'}} VNĐ</span>
+                    <span *ngIf="product.price == 0 || product.price == ''">Liên hệ</span>
+                  </div>
+
+                  <div class="datmuasp">
+                    <div>Số lượng:
+                      <input type="text" name="quantity" size="2" [(ngModel)]="product.amount">
+
+                      <a (click)="plus()" class="add_to_cart">
+                        <input type="button" value="Mua sản phẩm này" id="button-cart">
+                      </a>
+                    </div>
+                    <div class="hotrosp">
+                      <a href="tel:{{config.zalo}}">
+                        <img alt="Zalo" src="assets/theme/image/Icon-Zalo-Zalo.png">
+                      </a>
+                      <a href="tel:{{config.viber}}">
+                        <img alt="Viber" src="assets/theme/image/appicon.png">
+                      </a>
+                      <a href="skype:{{config.skype}}?chat">
+                        <img alt="Skype" src="assets/theme/image/contact-skype.png">
+                      </a>
+                      <a href="mailto:{{config.email}}">
+                        <img alt="Email" src="assets/theme/image/email-icon.png">
+                      </a>
+                      <div class="dienthoaisp">
+                        <div class="tb">Để được tư vấn cụ thể quý khách vui lòng gọi: </div>
+                        <div class="dt">
+                          <a href="tel:{{config.phone}}">{{config.phone}}</a> -
+                          <a href="tel:{{config.hotonline}}">{{config.hotonline}}</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="metadessp">{{product.name}}</div>
+                </div>
+              </div>
+              <div class="product-infoo">
+                <div class="tabs">
+                  <a tab="#tab_description" class="selected">Chi tiết sản phẩm</a>
+                </div>
+                <div class="descriptionpp tab_page">
+                  <div *ngFor="let item of product.productDetail">
+                    <ng-container *ngIf="item.pathVideo !== '' && item.path !== ''">
+                      <ng-container *ngIf="item.positionVideo == 0 && item.positionImage == 0">
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 0 && item.positionImage == 1">
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 0 && item.positionImage == 2">
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                          <div class="col-6" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 0 && item.positionImage == 3">
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-6">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 1 && item.positionImage == 0">
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 1 && item.positionImage == 1">
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 1 && item.positionImage == 2">
+                        <div class="row">
+                          <div class="col-6">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                          <div class="col-6" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 1 && item.positionImage == 3">
+                        <div class="row">
+                          <div class="col-6" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-6">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 2 && item.positionImage == 0">
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-6" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 2 && item.positionImage == 1">
+                        <div class="row">
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-6" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 2 && item.positionImage == 2">
+                        <div class="row">
+                          <div class="col-4">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                          <div class="col-4">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-4" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 2 && item.positionImage == 3">
+                        <div class="row">
+                          <div class="col-4">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-4" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-4">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 3 && item.positionImage == 0">
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                        <div class="row">
+                          <div class="col-4" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-4">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 3 && item.positionImage == 1">
+                        <div class="row">
+                          <div class="col-4" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-4">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 3 && item.positionImage == 2">
+                        <div class="row">
+                          <div class="col-4">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                          <div class="col-4" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-4">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 3 && item.positionImage == 3">
+                        <div class="row">
+                          <div class="col-4" [innerHtml]="item.content | safehtml"></div>
+                          <div class="col-4">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-4">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="item.pathVideo !== '' && item.path === ''">
+                      <ng-container *ngIf="item.positionVideo == 0">
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 1">
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3"></div>
+                          <div class="col-6 ">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-3"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 2">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                          <div class="col-md-6">
+                            <div [innerHtml]="item.content | safehtml"></div>
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionVideo == 3">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div [innerHtml]="item.content | safehtml"></div>
+                          </div>
+                          <div class="col-md-6">
+                            <iframe allowfullscreen="" frameborder="0" height="300" [src]="item.pathVideo | safeLink" width="100%">
+                            </iframe>
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="item.pathVideo === '' && item.path !== ''">
+                      <ng-container *ngIf="item.positionImage == 0">
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionImage == 1">
+                        <div class="row">
+                          <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                        </div>
+                        <div class="row">
+                          <img style="height: 500px !important" src="{{item.image}}" />
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionImage == 2">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                          <div class="col-md-6">
+                            <div [innerHtml]="item.content | safehtml"></div>
+                          </div>
+                        </div>
+                      </ng-container>
+                      <ng-container *ngIf="item.positionImage == 3">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div [innerHtml]="item.content | safehtml"></div>
+                          </div>
+                          <div class="col-md-6">
+                            <img style="height: 500px !important" src="{{item.image}}" />
+                          </div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="item.pathVideo === '' && item.path === ''">
+                      <div class="row">
+                        <div class="col-12" [innerHtml]="item.content | safehtml"></div>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="chitietsp">
+                  <span>Sản phẩm cùng loại ({{source.length}})</span>
+                </div>
+                <div class="dmsp">
+                  <div class="sanphamdm xam" *ngFor="let item of source">
+                    <div *ngIf="item.id !== product.id">
+                      <div style="line-height: 0px;" class="image">
+                        <a title="{{item.name}}" routerLink="/{{item.link}}">
+                          <img title="{{item.name}}" style="width: 100%" src="{{item.imageInfo[0].image}}" alt="{{item.name}}">
+                        </a>
+                      </div>
+                      <div class="tensp">
+                        <h2>
+                          <a title="{{item.name}}" routerLink="/{{item.link}}">{{item.name}}</a>
+                        </h2>
+                      </div>
+                      <div class="model">{{item.code}}</div>
+                      <div class="gia">
+                        <div class="giamoi" *ngIf="item.price!=0 && item.price != ''">{{item.price | number:'1.0'}} VNĐ</div>
+                        <div class="giamoi" *ngIf="item.price == 0 || item.price == ''">Liên hệ</div>
+                      </div>
+                    </div>
+                    <div class="chitietvsmua" *ngIf="item.id !== product.id">
+                      <div class="chitiet">
+                        <a title="{{item.name}}" routerLink="/{{item.link}}">Chi tiết</a>
+                      </div>
+                      <div class="mua">
+                        <a href="http://duocthaotuean.com/index.php?route=checkout/cart&amp;product_id=420" title="Mua hàng">Đặt hàng</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="fb-root" class=" fb_reset">
+
+              </div>
+              <div class="fb-comments" [attr.data-href]="href" data-numposts="10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

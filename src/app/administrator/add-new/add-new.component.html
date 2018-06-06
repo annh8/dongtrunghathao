@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-md-12">
+    <form method="post" #form="ngForm">
+      <nb-card>
+        <nb-card-header>Thông tin cơ bản</nb-card-header>
+        <nb-card-body>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Tên bài viết</label>
+            <div class="col-sm-9">
+              <input type="text" #proFocus class="form-control" name="newName" id="inputName" [(ngModel)]="new.name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Mô tả</label>
+            <div class="col-sm-9">
+              <textarea rows="5" class="form-control" [(ngModel)]="new.description" name="newsDescription"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Hiển thị trang chủ</label>
+            <div class="col-sm-9">
+              <input type="checkbox" name="newShowTop" [(ngModel)]="new.showTop" class="custom-control-input" id="b-checkbox">
+              <label class="custom-control-label" for="b-checkbox"></label>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-header>Ảnh bài viết</nb-card-header>
+        <nb-card-body>
+          <div class="form-group row" *ngFor="let item of new.imageInfo;let index = index;">
+            <label for="inputName" class="col-sm-3 col-form-label">Upload ảnh</label>
+            <div class="col-sm-6">
+              <upload-form [pathFolder]="pathFolder" (getUrlEvent)="receiveUrl($event,index)"></upload-form>
+            </div>
+            <div class="col-sm-3">
+              <img width="200px" src="{{item.image}}" />
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-header>Mô tả chi tiết </nb-card-header>
+        <nb-card-body>
+          <div class="form-group row" *ngFor="let item of new.newDetail;let index = index;">
+            <label for="inputName" class="col-sm-3 col-form-label">Upload ảnh</label>
+            <div class="col-sm-9">
+              <upload-form [pathFolder]="pathFolder" (getUrlEvent)="receiveDetailUrl($event,index)"></upload-form>
+            </div>
+            <label class="col-sm-3 col-form-label">Vị trí ảnh</label>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <select class="form-control" name="positionImage_{{index}}" [(ngModel)]="item.positionImage">
+                  <option value="0" selected>Trên</option>
+                  <option value="1">Dưới</option>
+                  <option value="2">Trái</option>
+                  <option value="3">Phải</option>
+                </select>
+              </div>
+            </div>
+            <label for="inputOrder" class="col-sm-3 col-form-label">Video</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="productVideo_{{index}}" [(ngModel)]="item.pathVideo">
+            </div>
+            <label class="col-sm-3 col-form-label">Vị trí video</label>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <select class="form-control" name="positionVideo_{{index}}" [(ngModel)]="item.positionVideo">
+                  <option value="0" selected>Trên</option>
+                  <option value="1">Dưới</option>
+                  <option value="2">Trái</option>
+                  <option value="3">Phải</option>
+                </select>
+              </div>
+            </div>
+            <label for="inputName" class="col-sm-3 col-form-label">Nội dung</label>
+            <div class="col-sm-9">
+              <ngx-tiny-mce [initialContent]="item.content" (editorKeyup)="getContent($event,index)"></ngx-tiny-mce>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary btn-demo" (click)="onRemove()">Xoá</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success" (click)="onPlus()">Thêm</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-body>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary btn-demo" (click)="onClear()">Clear</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success btn-demo" (click)="onSave()" [disabled]="submitted || !form.valid">Lưu</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </form>
+  </div>
+</div>

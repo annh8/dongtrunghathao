@@ -1,0 +1,157 @@
+<div class="row">
+  <div class="col-md-3">
+    <nb-card>
+      <nb-card-header>
+        Danh mục sản phẩm
+      </nb-card-header>
+      <nb-card-body>
+        <ng2-smart-table #table (userRowSelect)="onSelectedRow($event)" [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-9">
+    <form method="post" #form="ngForm">
+      <nb-card>
+        <nb-card-header>Thông tin cơ bản</nb-card-header>
+        <nb-card-body>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Danh mục</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="categoryName" id="inputId" [(ngModel)]="category.name" readonly="readonly"
+                required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Mã sản phẩm</label>
+            <div class="col-sm-9">
+              <input type="text" #proFocus class="form-control" name="productCode" id="inputCode" [(ngModel)]="product.code" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputName" class="col-sm-3 col-form-label">Tên sản phẩm</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="productName" id="inputName" [(ngModel)]="product.name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputOrder" class="col-sm-3 col-form-label">Số thứ tự</label>
+            <div class="col-sm-9">
+              <input type="number" min="0" class="form-control" name="productOrder" id="inputOrder" [(ngModel)]="product.order">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputOrder" class="col-sm-3 col-form-label">Trạng thái</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="productStatus" id="inputStatus" [(ngModel)]="product.status">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputOrder" class="col-sm-3 col-form-label">Thể loại</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="productType" id="inputType" [(ngModel)]="product.type">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputOrder" class="col-sm-3 col-form-label">Giá</label>
+            <div class="col-sm-9">
+              <input type="number" min="0" class="form-control" name="productPrice" id="inputPrice" [(ngModel)]="product.price">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputOrder" class="col-sm-3 col-form-label">Từ khoá</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="productTag" id="inputTag" [(ngModel)]="product.tag">
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-header>Ảnh sản phẩm</nb-card-header>
+        <nb-card-body>
+          <div class="form-group row" *ngFor="let item of product.imageInfo;let index = index;">
+            <label for="inputName" class="col-sm-3 col-form-label">Upload ảnh</label>
+            <div class="col-sm-6">
+              <upload-form [pathFolder]="pathFolder" (getUrlEvent)="receiveUrl($event,index)"></upload-form>
+            </div>
+            <div class="col-sm-3">
+                <img width="200px" src="{{item.image}}" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary" (click)="onRemoveImage()">Xoá</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success" (click)="onPlusImage()">Thêm</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-header>Mô tả chi tiết </nb-card-header>
+        <nb-card-body>
+          <div class="form-group row" *ngFor="let item of product.productDetail;let index = index;">
+            <label for="inputName" class="col-sm-3 col-form-label">Upload ảnh</label>
+            <div class="col-sm-6">
+              <upload-form [pathFolder]="pathFolder" (getUrlEvent)="receiveDetailUrl($event,index)"></upload-form>
+            </div>
+            <div class="col-sm-3">
+                <img width="200px" src="{{item.image}}" />
+            </div>
+            <label class="col-sm-3 col-form-label">Vị trí ảnh</label>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <select class="form-control" name="positionImage_{{index}}" [(ngModel)]="item.positionImage">
+                  <option value="0" selected>Trên</option>
+                  <option value="1">Dưới</option>
+                  <option value="2">Trái</option>
+                  <option value="3">Phải</option>
+                </select>
+              </div>
+            </div>
+            <label for="inputOrder" class="col-sm-3 col-form-label">Video</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="productVideo_{{index}}" [(ngModel)]="item.pathVideo">
+            </div>
+            <label class="col-sm-3 col-form-label">Vị trí video</label>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <select class="form-control" name="positionVideo_{{index}}" [(ngModel)]="item.positionVideo">
+                  <option value="0" selected>Trên</option>
+                  <option value="1">Dưới</option>
+                  <option value="2">Trái</option>
+                  <option value="3">Phải</option>
+                </select>
+              </div>
+            </div>
+            <label for="inputName" class="col-sm-3 col-form-label">Nội dung</label>
+            <div class="col-sm-9">
+              <ngx-tiny-mce [initialContent]="item.content" (editorKeyup)="getContent($event,index)"></ngx-tiny-mce>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary btn-demo" (click)="onRemove()">Xoá</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success" (click)="onPlus()">Thêm</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+      <nb-card>
+        <nb-card-body>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-secondary btn-demo" (click)="onClear()">Clear</button>
+            </div>
+            <div class="offset-sm-3 col-sm-3">
+              <button class="btn btn-hero-success btn-demo" (click)="onSave()" [disabled]="submitted || !form.valid">Lưu</button>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<nb-auth-block>
+  <h2 class="title">Sign In</h2>
+  <small class="form-text sub-title">Hello! Sign in with your username or email</small>
+  <form #form="ngForm">
+    <div class="form-group">
+      <label for="input-email" class="sr-only">Email address</label>
+      <input name="email" id="input-email" class="form-control" [(ngModel)]="user.email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <label for="input-password" class="sr-only">Password</label>
+      <input name="password" type="password" id="input-password" class="form-control" placeholder="Password" [(ngModel)]="user.password"
+        required>
+    </div>
+    <button [disabled]="submitted || !form.valid" class="btn btn-block btn-hero-success" [class.btn-pulse]="submitted" (click)="signInWithEmail()">
+      Sign In </button>
+  </form>
+</nb-auth-block>

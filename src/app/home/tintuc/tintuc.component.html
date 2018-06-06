@@ -1,0 +1,49 @@
+<div class="breadcrumb">
+  <div class="center">
+    <div id="breadcrumb">
+      <a routerLink="/">Trang chủ </a>
+      &gt;
+      <a routerLink="/tin-tuc">Tin tức</a>
+    </div>
+  </div>
+</div>
+<div id="wraper">
+  <div id="container">
+    <section id="content">
+      <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+          <h1 #proFocus style="margin-top: 15px">Tin tức</h1>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="sort">
+          <div class="div1">
+            <select name="sort" onchange="location = this.value">
+              <option value="name&DESC">Tên Z - A</option>
+              <option value="name&ASC">Tên A - Z</option>
+            </select>
+          </div>
+          <div class="div2">Sắp xếp:</div>
+        </div>
+        <div class="list">
+          <div class="tintuc" *ngFor="let item of news">
+            <h2>
+              <a title="{{item.name}}" routerLink="/{{item.link}}">{{item.name}}</a>
+            </h2>
+
+            <div class="tentt">
+              <a title="{{item.name}}" routerLink="/{{item.link}}">
+                <img src="{{item.imageInfo[0].image}}">
+              </a>
+            </div>
+            <div class="noidungtt">
+              {{item.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

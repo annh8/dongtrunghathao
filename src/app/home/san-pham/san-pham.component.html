@@ -1,0 +1,67 @@
+<div class="breadcrumb">
+  <div class="center">
+    <div id="breadcrumb">
+      <a routerLink="/">Trang chủ </a>
+      &gt;
+      <a routerLink="/san-pham">Sản phẩm</a>
+    </div>
+  </div>
+</div>
+<div id="wraper">
+  <div id="container">
+    <section id="content">
+      <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+          <h1>Sản phẩm</h1>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="sort">
+          <div class="div1">
+            <select name="sort" (change)="onChange($event)">
+              <option value="order&ASC">Mặc định</option>
+              <option value="name&DESC">Tên Z - A</option>
+              <option value="name&ASC">Tên A - Z</option>
+              <option value="price&ASC">Giá Thấp - Cao</option>
+              <option value="price&DESC">Giá Cao - Thấp</option>
+              <option value="code&ASC">Mã sản phẩm A - Z</option>
+              <option value="code&DESC">Mã sản phẩm Z - A</option>
+            </select>
+          </div>
+          <div class="div2">Xếp theo:</div>
+        </div>
+        <div class="dmsp">
+          <div class="sanphamdm xam" *ngFor="let item of productList">
+            <div>
+              <div class="image">
+                <a title="{{item.name}}" routerLink="/{{item.link}}">
+                  <img title="{{item.name}}" style="width: 100%" src="{{item.imageInfo[0].image}}" alt="{{item.name}}" />
+                </a>
+              </div>
+              <div class="tensp">
+                <h2>
+                  <a title="{{item.name}}" routerLink="/{{item.link}}">{{item.name}}</a>
+                </h2>
+              </div>
+              <div class="model">{{item.code}}</div>
+              <div class="gia">
+                <div class="giamoi" *ngIf="item.price!=0 && item.price != ''">{{item.price | number:'1.0'}} VNĐ</div>
+                <div class="giamoi" *ngIf="item.price == 0 || item.price == ''">Liên hệ</div>
+              </div>
+            </div>
+            <div class="chitietvsmua">
+              <div class="chitiet">
+                <a title="{{item.name}}" routerLink="/{{item.link}}">Chi tiết</a>
+              </div>
+              <div class="mua">
+                <a routerLink="/gio-hang/{{item.id}}" title="Mua hàng">Đặt hàng</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div id="wraper">
+  <div id="container">
+    <div id="content">
+      <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+          <h1>
+            Giỏ hàng
+          </h1>
+        </div>
+      </div>
+      <div class="middle">
+        <form method="post" enctype="multipart/form-data" id="cart">
+          <table class="cart">
+            <tbody>
+              <tr>
+                <th align="center">Loại bỏ</th>
+                <th align="center">Hình</th>
+                <th align="left">Tên</th>
+                <th align="left">Model</th>
+                <th align="right">Số lượng</th>
+                <th align="right">Đơn giá</th>
+                <th align="right">Tổng</th>
+              </tr>
+              <tr class="even" *ngFor="let item of productList">
+                <td align="center">
+                  <img src="assets/theme/image/cancel.png" (click)="remove(item.id)" class="removeimg" style="cursor: pointer;">
+                </td>
+                <td align="center">
+                  <a routerLink="/{{item.link}}">
+                    <img src="{{item.imageInfo[0].image}}" alt="{{item.name}}" style="cursor: pointer;">
+                  </a>
+                </td>
+                <td align="left" valign="top">
+                  <a routerLink="/{{item.link}}">{{item.name}}</a>
+                  <span style="color: #FF0000; font-weight: bold;" class="stock"></span>
+                  <div>
+                  </div>
+                </td>
+                <td align="left" valign="top">{{item.code}}</td>
+                <td align="right" valign="top">
+                  <img src="assets/theme/image/plus.png" (click)="plus(item.id)" class="plusimg" align="absmiddle" style="cursor: pointer;">&nbsp;
+                  <input type="text" name="amount_{{item.id}}" [(ngModel)]="item.amount" size="1" style="width:24px;" />&nbsp;
+                  <img src="assets/theme/image/subtract.png" (click)="subtract(item.id)" class="subtractimg" align="absmiddle" style="cursor: pointer;">
+                </td>
+                <td align="right" valign="top" class="price">
+                  <span *ngIf="item.price!=0 && item.price != ''">{{item.price | number:'1.0'}} VNĐ</span>
+                  <span *ngIf="item.price == 0 || item.price == ''">Liên hệ</span>
+                </td>
+                <td align="right" valign="top" class="total">
+                  <span *ngIf="item.total!=0 && item.total != ''">{{item.total | number:'1.0'}} VNĐ</span>
+                  <span *ngIf="item.total == 0 || item.total == ''">Liên hệ</span>
+                </td>
+              </tr>
+              <tr class="even">
+                <td colspan="5">
+
+                </td>
+                <td align="right" valign="top" class="price">
+                  <b>Tổng:</b>
+                </td>
+                <td align="right" valign="top" class="total">
+                  <span *ngIf="total!=0 && total != ''">{{total | number:'1.0'}} VNĐ</span>
+                  <span *ngIf="total == 0 || total == ''">Liên hệ</span>
+                </td>
+              </tr>
+              <tr class="even">
+                <td align="left">
+                  <a routerLink="/" class="button">
+                    <span>Tiếp tục mua hàng</span>
+                  </a>
+                </td>
+                <td colspan="5">
+                </td>
+                <td align="right">
+                  <a routerLink="/thanh-toan" class="button">
+                    <span>Thanh toán</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

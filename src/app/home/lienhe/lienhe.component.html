@@ -1,0 +1,68 @@
+<div id="wraper">
+  <div id="container">
+    <div id="content">
+      <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+          <h1>Liên hệ với chúng tôi</h1>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="content">
+          <div style="display: inline-block; width: 100%;">
+            <div style="display: inline-block; width: 50%;">
+              <b>Địa chỉ:</b>
+              <br> {{config.title}}
+              <br> {{config.location}}
+            </div>
+            <div style="display: inline-block; width: 50%;">
+              <b>Điện thoại:</b>
+              <br> {{config.hotonline}}
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td>Họ và tên:
+                  <br>
+                  <input type="text" name="name" [(ngModel)]="name">
+                </td>
+              </tr>
+              <tr>
+                <td>Email :
+                  <br>
+                  <input type="text" name="email" [(ngModel)]="email">
+                </td>
+              </tr>
+              <tr>
+                <td>Nội dung:
+                  <br>
+                  <textarea name="enquiry" style="width: 99%;" rows="10" [(ngModel)]="content"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="buttons">
+          <table>
+            <tbody>
+              <tr>
+                <td align="right">
+                  <a (click)="sendEmail()" class="button">
+                    <span>Tiếp tục</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

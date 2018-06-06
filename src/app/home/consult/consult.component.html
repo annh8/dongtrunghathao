@@ -1,0 +1,36 @@
+<div class="wow fadeInUp">
+  <div class="mymodule8">
+    <div id="container">
+      <div class="middlett">
+        <h3>
+          ĐỘI NGŨ TƯ VẤN NHIỆT TÌNH</h3>
+        <p>
+          Các chuyên gia của chúng tôi sẽ giải đáp mọi thắc mắc của quý khách ngay lập tức và hoàn toàn miễn phí.</p>
+        <div style="font-size: 12px; font-weight: normal;">
+          <p>
+          </p>
+        </div>
+        <blockquote *ngFor="let item of config.support">
+          <ul>
+            <li>
+              <img alt="Đông trùng hạ thảo - Tư vấn miễn phí" height="400" src="{{item.image.image}}"
+                width="350" />
+            </li>
+          </ul>
+          <h4>
+            {{item.chucdanh}}</h4>
+          <p>
+            Hotline: {{item.phone}}</p>
+          <div>
+            <a href="skype:{{item.skype}}?chat" title="skype">
+              <img alt="Skype" height="18" src="assets/theme/image/data/178/skyp1e.png" width="84" />
+            </a>
+            <a href="zalo:{{item.zalo}}" title="zalo">
+              <img alt="Zalo" height="18" src="assets/theme/image/data/178/zalo_bot.png" width="86" />
+            </a>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>

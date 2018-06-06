@@ -1,0 +1,47 @@
+/* Fonts */
+@font-face{
+    font-family: 'Karla';
+    src: url('KarlaF-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'Karla';
+    src: url('KarlaF-Italic.ttf');
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Karla';
+    src: url('KarlaF-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: 'Karla';
+    src: url('KarlaF-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face{
+    font-family: 'Sylvan';
+    src: url('SylvanHWscript1.0.ttf');
+}
+@font-face{
+    font-family: 'UTM AVO';
+    src: url('UTM AVO.TTF');
+}
+@font-face{
+    font-family: 'UTM AVO BOLD';
+    src: url('UTM AVOBOLD.TTF');
+}
+@font-face{
+    font-family: 'ama';
+    src: url('gdi.woff');
+}
+
+@font-face{
+    font-family: 'ama bold';
+    src: url('gdi_SemiBold.woff');
+}

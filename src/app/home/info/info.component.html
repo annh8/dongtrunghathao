@@ -1,0 +1,84 @@
+<h1 style="display: none">{{config.title}}</h1>
+<div id="wraperh">
+  <div id="container">
+    <div style="margin-left: 0px" id="content">
+    </div>
+    <div style="overflow: auto">
+      <div class="imagelinks3t">
+        <div class="imagelinks5">
+          <div class="youtube" id="ytapiplayer">
+            <iframe allowfullscreen="" frameborder="0" height="300" src="https://www.youtube.com/embed/bn8Te57wKZE" width="100%">
+            </iframe>
+          </div>
+          <div class="ytb" *ngFor="let item of config.video">
+            <a href="javascript:void(0)" (click)="loadNewVideo(item.key,0)">
+              <span>{{item.title}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="imagelinks3p">
+        <div class="html1tc">
+          <h1>Về chúng tôi</h1>
+          <div [innerHtml]="config.homepageConfig.content | safehtml"></div>
+          <div (click)="myFunction()">
+            <div id="myDIV">
+                <div [innerHtml]="config.homepageConfig.contentDetail | safehtml"></div>
+            </div>
+            <a class="show_hide">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wow fadeInUp">
+    <div class="html2">
+      <div id="container">
+        <div class="top">
+          <h2> ĐÔNG TRÙNG HẠ THẢO - {{config.title}} </h2>
+        </div>
+        <div class="middlett">
+          <blockquote>
+              <div [innerHtml]="config.homepageConfig.productInfo | safehtml"></div>
+          </blockquote>
+          <blockquote>
+            <div>
+              <img alt="Đông Trùng Hạ Thảo Tươi Nguyên Con" height="700" src="assets/theme/image/data/tuean/dong-trung-ha-thao-tuoi.png"
+                width="500" />
+            </div>
+            <div>
+              <a routerLink="/san-pham">Xem chi tiết sản phẩm</a>
+            </div>
+          </blockquote>
+          <blockquote>
+              <div [innerHtml]="config.homepageConfig.productInfoDetail | safehtml"></div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wow fadeInUp">
+    <div class="mymodule7">
+      <div id="container">
+        <div class="middlett">
+          <h3 style="text-align: center;">
+            <img alt="{{config.title}}" height="50" src="assets/theme/image/data/tuean/dongtrunghathao/Logo.png" style="font-size: 12px;"
+              width="50" />
+          </h3>
+          <h3 style="text-align: center;">
+            {{config.title}}
+          </h3>
+          <p style="text-align: center;">
+              {{config.subtitle}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <topproduct></topproduct>
+  <feelcustomer [config]="config"></feelcustomer>
+  <consult [config]="config"></consult>
+  <div style="clear: both">
+
+  </div>
+</div>

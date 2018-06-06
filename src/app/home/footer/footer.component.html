@@ -1,0 +1,123 @@
+<footer id="footer">
+  <div class="wrapernl">
+    <div class="wrapernl2">
+      <div class="dathangkm">
+      </div>
+    </div>
+  </div>
+  <div class="wraper5">
+    <div class="module_footermenu">
+      <!-- Menu header -->
+      <div class="footermenu">
+        <div class="menu xanhga">
+          <ul>
+            <li>
+              <a class="inactive" href="/">
+                <i class="fa fa-home"></i>
+              </a>
+            </li>
+            <li *ngFor="let mn of menu">
+                <a routerLink="{{mn.path}}" title="{{mn.title}}">{{mn.title}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wraper6">
+    <div class="module_danhmucface">
+      <div class="danhmucface">
+        <div class="footer11">
+          <div class="cuoiphai0">
+            <li *ngFor="let mn of menu">
+                <a routerLink="{{mn.path}}" title="{{mn.title}}">{{mn.title}}</a>
+            </li>
+          </div>
+          <div class="cuoiphai">
+            <iframe [src]="config.pageFacebook | safeLink" width="500" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          </div>
+        </div>
+        <div class="footer12">
+          <div class="welpow">
+            <div class="welcome">
+              <div>
+                <p>
+                  <span style="font-family:times new roman,times,serif;">
+                    <span style="font-size:14px;">
+                      <b>{{config.companyName}}</b>
+                    </span>
+                  </span>
+                </p>
+                <p>
+                  <span style="font-family:times new roman,times,serif;">
+                    <span style="font-size:14px;">
+                      <strong>Địa chỉ: </strong>{{config.location}}.</span>
+                  </span>
+                </p>
+                <p>
+                  <span style="font-family:times new roman,times,serif;">
+                    <span style="font-size:14px;">
+                      <strong>Website:</strong>&nbsp;{{config.website}}</span>
+                  </span>
+                </p>
+                <p>
+                  <span style="font-family:times new roman,times,serif;">
+                    <span style="font-size:14px;">
+                      <strong>Điện thoại:</strong>&nbsp;{{config.phone}}</span>
+                  </span>
+                </p>
+                <p>
+                  <strong>Hotline:</strong> {{config.hotonline}}</p>
+                <p>
+                  <span style="font-family:times new roman,times,serif;">
+                    <span style="font-size:14px;">
+                      <strong>Fax:</strong> {{config.fax}}</span>
+                  </span>
+                </p>
+                <p>
+                  <span style="font-size:14px;">
+                    <span style="font-family:times new roman,times,serif;">
+                      <em>Bản quyền thuộc về</em>
+                      <span style="color: rgb(0, 0, 0);">&nbsp;
+                        <a href="{{config.website}}">
+                          <i>{{config.companyName}}</i>
+                        </a>
+                      </span>
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <br />
+              <div>
+                <div style="display:inline-block;    vertical-align: top;" class="g-plusone" data-size="medium" data-annotation="none"></div>
+                <script type="text/javascript">(function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));</script>
+                <div style="display:inline-block;     margin-top: -4px  ; vertical-align: top;" class="fb-like" data-send="true" data-layout="button_count"
+                  data-width="0" data-colorscheme="dark" data-show-faces="false"></div>
+                <script src="https://apis.google.com/js/platform.js" async defer></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="box-1">
+    <div class="box-1">
+      <div class="datcauhoi">
+        <span></span>
+        <a href="tel:0936.968.896">{{config.hotonline}}</a>
+      </div>
+      <div class="logo-footer-1"></div>
+      <div class="box-muahang">
+        <span></span>
+        <a href="tel:0936 968 896">{{config.phone}}</a>
+      </div>
+    </div>
+  </div>
+</footer>

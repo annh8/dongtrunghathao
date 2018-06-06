@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('fontello.eot');
+  src: url('fontello.eot?#iefix') format('embedded-opentype'), url('fontello.woff') format('woff'), url('fontello.ttf') format('truetype'), url('fontello.svg#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  
+  font-family: 'UTMDaxlineRegular';
+    src: url('utm_dax-webfont.eot');
+    src: url('utm_dax-webfont.eot?#iefix') format('embedded-opentype'),
+         url('utm_dax-webfont.woff') format('woff'),
+         url('utm_dax-webfont.ttf') format('truetype'),
+         url('utm_dax-webfont.svg#UTMDaxlineRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

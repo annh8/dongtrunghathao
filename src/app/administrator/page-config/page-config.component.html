@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-9">
+      <form method="post" #form="ngForm">
+        <nb-card>
+          <nb-card-header>Về chúng tôi</nb-card-header>
+          <nb-card-body>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Nội dung cơ bản</label>
+              <div class="col-sm-9">
+                <ngx-tiny-mce #content1 [initialContent]="content" (editorKeyup)="getContent($event)"></ngx-tiny-mce>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Nội dung chi tiết</label>
+              <div class="col-sm-9">
+                <ngx-tiny-mce #content2 [initialContent]="contentDetail" (editorKeyup)="getContentDetail($event)"></ngx-tiny-mce>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+        <nb-card>
+          <nb-card-header>Đông trùng hạ thảo</nb-card-header>
+          <nb-card-body>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Nội dung mô tả 1</label>
+              <div class="col-sm-9">
+                <ngx-tiny-mce #content3 [initialContent]="productInfo" (editorKeyup)="getContentProductInfo($event)"></ngx-tiny-mce>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Nội dung mô tả 2</label>
+              <div class="col-sm-9">
+                <ngx-tiny-mce #content4 [initialContent]="productInfoDetail" (editorKeyup)="getContentproductInfoDetail($event)"></ngx-tiny-mce>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+        <nb-card>
+          <nb-card-body>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-3">
+                <button class="btn btn-hero-success btn-demo" (click)="onSave()" [disabled]="submitted || !form.valid">Lưu</button>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </form>
+    </div>
+  </div>
